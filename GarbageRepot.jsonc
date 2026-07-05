@@ -1,0 +1,99 @@
+{
+  "name": "GarbageReport",
+  "type": "object",
+  "properties": {
+    "reporter_name": {
+      "type": "string",
+      "title": "Reporter Name"
+    },
+    "reporter_phone": {
+      "type": "string",
+      "title": "Reporter Phone"
+    },
+    "location_lat": {
+      "type": "number",
+      "title": "Latitude"
+    },
+    "location_lng": {
+      "type": "number",
+      "title": "Longitude"
+    },
+    "address": {
+      "type": "string",
+      "title": "Address"
+    },
+    "photo_url": {
+      "type": "string",
+      "title": "Photo URL"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "garbage_type": {
+      "type": "string",
+      "title": "Garbage Type",
+      "enum": [
+        "Household",
+        "Construction",
+        "Medical",
+        "Organic",
+        "Electronic",
+        "Other"
+      ],
+      "default": "Household"
+    },
+    "severity": {
+      "type": "string",
+      "title": "Severity",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "default": "Medium"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "Reported",
+        "In Progress",
+        "Resolved"
+      ],
+      "default": "Reported"
+    },
+    "assigned_worker_id": {
+      "type": "string",
+      "title": "Assigned Worker ID"
+    },
+    "assigned_worker_name": {
+      "type": "string",
+      "title": "Assigned Worker Name"
+    },
+    "in_progress_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "In Progress At"
+    },
+    "resolution_note": {
+      "type": "string",
+      "title": "Resolution Note"
+    },
+    "resolved_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Resolved At"
+    },
+    "zone": {
+      "type": "string",
+      "title": "Zone"
+    }
+  },
+  "required": [
+    "location_lat",
+    "location_lng",
+    "garbage_type",
+    "status"
+  ]
+}
